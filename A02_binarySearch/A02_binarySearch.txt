@@ -1,0 +1,40 @@
+📘 A02_BinarySearch – Interview Notes
+
+Algorithm: Binary Search
+------------------------
+- Binary Search is a divide-and-conquer algorithm.
+- Requires **sorted arrays**.
+- Repeatedly divides the search space in half until the target is found.
+
+Time Complexity:
+-----------------
+- Best Case → O(1) (middle element is target)
+- Worst Case → O(log n)
+- Space Complexity → O(1) for iterative, O(log n) for recursive
+
+Variants:
+----------
+1. **Standard Binary Search** → search in 1D sorted array
+2. **Binary Search in 2D array** → usually row-wise and column-wise sorted
+3. **Order-Agnostic Binary Search** → works on both ascending and descending arrays
+4. **Infinite Array Search** → find range first, then apply binary search
+
+Key Points:
+------------
+- Always check boundary conditions to avoid IndexOutOfBoundsException.
+- Can be implemented iteratively or recursively.
+- Explain difference from Linear Search (O(log n) vs O(n)).
+- Useful for optimization problems (searching in range).
+
+Example (Pseudocode):
+---------------------
+low = 0, high = n-1
+while low <= high:
+    mid = (low + high)/2
+    if arr[mid] == target:
+        return mid
+    else if arr[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+return -1

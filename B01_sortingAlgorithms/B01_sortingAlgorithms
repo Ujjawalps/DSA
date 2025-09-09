@@ -1,0 +1,77 @@
+📘 B01_SortingAlgorithms – Interview Notes
+
+Sorting Algorithms Overview
+---------------------------
+- Sorting is the process of arranging data in a specific order (ascending/descending).
+- Common sorting algorithms are used frequently in interviews and coding challenges.
+
+Algorithms Covered
+-------------------
+1. **Bubble Sort**
+   - Compare adjacent elements and swap if out of order.
+   - Time Complexity: Best → O(n), Worst → O(n^2)
+   - Space Complexity: O(1) (in-place)
+   - Stable: Yes
+   - Pseudocode:
+     ```
+     for i = 0 to n-1:
+         for j = 0 to n-i-2:
+             if arr[j] > arr[j+1]:
+                 swap arr[j], arr[j+1]
+     ```
+
+2. **Selection Sort**
+   - Find the minimum (or maximum) element and place it at correct position.
+   - Time Complexity: O(n^2) always
+   - Space Complexity: O(1)
+   - Stable: No
+   - Pseudocode:
+     ```
+     for i = 0 to n-1:
+         minIndex = i
+         for j = i+1 to n-1:
+             if arr[j] < arr[minIndex]:
+                 minIndex = j
+         swap arr[i], arr[minIndex]
+     ```
+
+3. **Insertion Sort**
+   - Build sorted array one element at a time by inserting elements at correct position.
+   - Time Complexity: Best → O(n), Worst → O(n^2)
+   - Space Complexity: O(1)
+   - Stable: Yes
+   - Pseudocode:
+     ```
+     for i = 1 to n-1:
+         key = arr[i]
+         j = i - 1
+         while j >= 0 and arr[j] > key:
+             arr[j+1] = arr[j]
+             j = j - 1
+         arr[j+1] = key
+     ```
+
+4. **Cyclic Sort**
+   - Used for arrays containing numbers from 1 to n.
+   - Places each number at its correct index (index = number-1).
+   - Time Complexity: O(n)
+   - Space Complexity: O(1)
+   - Stable: No
+   - Pseudocode:
+     ```
+     i = 0
+     while i < n:
+         correctIndex = arr[i] - 1
+         if arr[i] != arr[correctIndex]:
+             swap arr[i], arr[correctIndex]
+         else:
+             i = i + 1
+     ```
+
+Interview Tips
+----------------
+- Know which algorithms are stable and in-place.
+- Understand time and space complexities.
+- Be ready to implement iteratively.
+- Discuss optimizations if array is nearly sorted (e.g., Bubble Sort with flag).
+- Use sorting as a building block for problems (e.g., two pointers, binary search).

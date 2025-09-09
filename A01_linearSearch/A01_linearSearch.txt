@@ -1,0 +1,38 @@
+📘 A01_LinearSearch – Interview Notes
+
+Algorithm: Linear Search
+-----------------------
+- Linear Search (Sequential Search) checks each element in the array/list one by one.
+- Time Complexity:
+    • Best Case → O(1) (element at first position)
+    • Worst Case → O(n) (element at last position or not present)
+    • Average Case → O(n)
+- Space Complexity → O(1) (in-place)
+
+Key Points:
+-------------
+- Works on both sorted and unsorted arrays.
+- Simple and easy to implement.
+- Inefficient for large datasets.
+- Returns index of found element; -1 if not found.
+
+Variants:
+----------
+1. Search in 1D array
+2. Search in 2D array
+3. Search in String (character search)
+4. Search in range of indices
+
+Tips for Interviews:
+--------------------
+- Always check array bounds to avoid IndexOutOfBoundsException.
+- Can be implemented with loops or recursion.
+- Explain best, worst, and average case complexity.
+- Mention differences with Binary Search (requires sorted array, O(log n)).
+
+Example (pseudocode):
+---------------------
+for i = 0 to n-1:
+    if arr[i] == target:
+        return i
+return -1

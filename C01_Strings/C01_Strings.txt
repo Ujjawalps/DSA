@@ -1,0 +1,75 @@
+📘 C01_Strings – Interview Notes
+
+Java Strings Overview
+---------------------
+- Strings in Java are **immutable objects**.
+- Stored in **String Pool** for memory optimization.
+- Operations like concatenation, substring, etc., create new objects.
+
+Key Points
+-----------
+1. **Creating Strings**
+   - Literal: `String s = "Hello";`
+   - Object: `String s = new String("Hello");`
+
+2. **Common Methods**
+   - `length()`, `charAt(index)`, `substring(start, end)`, `concat()`
+   - `equals()`, `equalsIgnoreCase()`
+   - `indexOf()`, `lastIndexOf()`
+   - `toUpperCase()`, `toLowerCase()`
+   - `trim()`, `replace()`, `split()`
+
+3. **String vs StringBuilder vs StringBuffer**
+   - **String** → immutable, slow for modifications.
+   - **StringBuilder** → mutable, faster, not thread-safe.
+   - **StringBuffer** → mutable, thread-safe (synchronized).
+
+4. **Memory and Performance**
+   - Use StringBuilder for concatenations in loops.
+   - Avoid creating multiple Strings unnecessarily.
+
+5. **Interview Tips**
+   - Explain immutability and memory pool.
+   - Know differences between String, StringBuilder, StringBuffer.
+   - Be able to reverse, check palindrome, or manipulate strings efficiently.
+
+Pseudocode Examples
+-------------------
+1. **Reverse a String**
+```
+function reverse(s):
+result = ""
+for i = length(s)-1 to 0:
+result = result + s[i]
+return result
+```
+--------------------
+2. **Check Palindrome**
+```
+function isPalindrome(s):
+i = 0
+j = length(s)-1
+while i < j:
+if s[i] != s[j]:
+return false
+i = i + 1
+j = j - 1
+return true
+```
+-----------------
+
+3. **Count Vowels**
+```
+function countVowels(s):
+count = 0
+for each char in s:
+if char in ['a','e','i','o','u','A','E','I','O','U']:
+count = count + 1
+return count
+```
+
+Notes
+------
+- Strings are heavily used in coding interviews.
+- Optimize with StringBuilder/StringBuffer for mutable operations.
+- Always consider immutability when passing strings to methods.

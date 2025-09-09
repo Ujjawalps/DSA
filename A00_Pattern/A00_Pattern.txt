@@ -1,0 +1,25 @@
+📘 Day – A00_Pattern (Pattern Questions Practice)
+
+Topics Covered:
+- Introduction to Pattern Questions
+- Importance of practicing patterns
+- Prerequisites and step-by-step approach:
+  • Step 1: Identify rows/columns
+  • Step 2: Understand relation between rows & columns
+  • Step 3: Translate logic into loops
+
+Practiced Patterns:
+- Pattern 01
+- Pattern 02
+- Pattern 03
+- Pattern 04
+- Pattern 05
+- Pattern 17
+- Pattern 28
+- Pattern 30
+- Pattern 31
+
+Notes:
+- Focus on breaking each pattern into rows & columns.
+- Always dry run small examples before coding.
+- Builds strong foundation for nested loops and logic building.
