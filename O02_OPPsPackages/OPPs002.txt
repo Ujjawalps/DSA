@@ -1,0 +1,151 @@
+Day 2 - Packages, Static Keyword, Inner Classes & Singleton
+
+---------------------------------------
+1. Packages in Java
+---------------------------------------
+- A package is a group of related classes, interfaces, and sub-packages.
+- Helps organize code → easier to maintain, avoids name conflicts.
+- Types:
+   a) Built-in packages (e.g., java.util, java.io, java.sql)
+   b) User-defined packages (created by developer)
+- Syntax:
+      package myPackage;
+      import myPackage.ClassName;
+
+Example:
+   package A;
+   public class Greet { ... }
+
+   package B;
+   import A.Greet;
+   public class Message { ... }
+
+---------------------------------------
+2. "import" Statement
+---------------------------------------
+- Used to access classes from other packages.
+- Types:
+   a) import packageName.ClassName;   // imports specific class
+   b) import packageName.*;          // imports all classes in package
+- Without import → must use fully qualified name:
+      A.Greet g = new A.Greet();
+
+---------------------------------------
+3. Static Keyword in Java
+---------------------------------------
+- Static members belong to the class, not to individual objects.
+- Memory allocated once per class (class-level).
+- Can be variables, methods, blocks, or nested classes.
+
+a) Static Variables
+   - Shared across all objects.
+   - Example: Human.population → all Human objects share same population.
+
+b) Static Methods
+   - Can be called without creating an object.
+   - Cannot directly access non-static members.
+   - Cannot use `this` keyword (since `this` belongs to instance, not class).
+
+c) Static Block
+   - Runs once when class is loaded.
+   - Used for initializing static variables.
+   - Example:
+        static {
+            System.out.println("Class Loaded");
+        }
+
+---------------------------------------
+4. Non-Static inside Static
+---------------------------------------
+- Non-static variables/methods require an object.
+- Static method cannot access non-static directly.
+- Must create object first.
+
+Example:
+   static void fun() {
+       // System.out.println(name); // ERROR
+       Human h = new Human("John", 22);
+       System.out.println(h.name); // works
+   }
+
+---------------------------------------
+5. Static inside Non-Static
+---------------------------------------
+- Non-static method can access static members freely.
+- Because static belongs to class, accessible without object.
+
+Example:
+   void greet() {
+       System.out.println(population); // allowed
+   }
+
+---------------------------------------
+6. "this" in Static Context
+---------------------------------------
+- `this` refers to current object.
+- Since static members do not belong to any instance, `this` cannot be used inside static context.
+- Will give compile-time error.
+
+---------------------------------------
+7. Initialization of Static Variables
+---------------------------------------
+- Can be initialized directly or inside static block.
+- Example:
+      static int a = 5;
+      static int b;
+      static {
+          b = 10; // initialized in static block
+      }
+
+---------------------------------------
+8. Inner Classes
+---------------------------------------
+- A class defined inside another class.
+- Used to logically group classes that are only used in one place.
+- Types:
+   a) Non-static Inner Class → requires outer class object to be created.
+   b) Static Nested Class → can be created without outer class object.
+
+Example:
+   class Outer {
+       class Inner { ... }       // non-static
+       static class Nested { ... } // static
+   }
+
+---------------------------------------
+9. Internal Working (Quick Recap)
+---------------------------------------
+- Static methods/variables are linked to class-level.
+- Non-static linked to objects.
+- JVM loads class → executes static blocks → creates objects when required.
+
+---------------------------------------
+10. Singleton Class
+---------------------------------------
+- A design pattern that ensures only one object (instance) of a class is created.
+- Useful for cases like Database connection, Logging, Configuration, etc.
+- Steps:
+   1. Make constructor private.
+   2. Create a private static instance of the class.
+   3. Provide a public static method to return the instance.
+
+Example:
+   class Singleton {
+       private static Singleton instance;
+       private Singleton() {}
+       public static Singleton getInstance() {
+           if (instance == null) {
+               instance = new Singleton();
+           }
+           return instance;
+       }
+   }
+
+---------------------------------------
+11. Summary of Day 2
+---------------------------------------
+- Packages help organize code.
+- "import" allows access to classes across packages.
+- static keyword creates class-level members.
+- Inner classes allow logical grouping of classes.
+- Singleton Pattern ensures only one object is created.

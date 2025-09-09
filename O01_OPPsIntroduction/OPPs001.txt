@@ -1,0 +1,98 @@
+Day 1 - OOPs Introduction (Java)
+
+---------------------------------------
+1. Introduction to OOPs
+---------------------------------------
+- OOP = Object-Oriented Programming.
+- Core idea: real-world entities (Car, Human, BankAccount) are represented as objects.
+- Provides modularity, reusability, scalability, and maintainability.
+- 4 Pillars of OOPs: Encapsulation, Inheritance, Polymorphism, Abstraction (covered later).
+
+---------------------------------------
+2. Class and Object
+---------------------------------------
+- Class: A blueprint/template for creating objects.
+  Example:
+      class Car {
+          String color;
+          int speed;
+          void drive() { ... }
+      }
+- Object: An instance of a class.
+  Example:
+      Car myCar = new Car();
+
+---------------------------------------
+3. Properties of Object
+---------------------------------------
+- State: Data stored in object (fields/instance variables).
+- Behavior: What the object can do (methods).
+- Identity: Uniqueness of an object (memory reference in JVM).
+
+---------------------------------------
+4. How to Access & Create Objects
+---------------------------------------
+- Create object using `new` keyword.
+- Access instance variables using dot operator:
+      Car myCar = new Car();
+      myCar.color = "Red";
+      System.out.println(myCar.color);
+
+---------------------------------------
+5. Dynamic Memory Allocation
+---------------------------------------
+- Objects are stored in Heap memory.
+- Reference variable (on Stack) points to object (on Heap).
+- Example:
+      Car c1 = new Car(); // 'c1' reference stored in stack, actual Car in heap.
+
+---------------------------------------
+6. Constructors
+---------------------------------------
+- Special method with same name as class, no return type.
+- Called automatically when object is created.
+- Types:
+   a) Default Constructor → provided by Java if no constructor is defined.
+   b) Parameterized Constructor → takes arguments to initialize fields.
+- Constructor Overloading → multiple constructors with different parameter lists.
+- 'this' keyword → refers to current object.
+- Constructor Chaining → one constructor calls another using `this()`.
+
+---------------------------------------
+7. "this" Keyword
+---------------------------------------
+- Refers to current object.
+- Used to differentiate between instance variable and parameter with same name.
+- Example:
+      class Human {
+          String name;
+          Human(String name) {
+              this.name = name;
+          }
+      }
+
+---------------------------------------
+8. Primitive vs Objects
+---------------------------------------
+- Primitive data types (int, char, double, boolean, etc.) are not objects.
+- Wrapper Classes (Integer, Character, Double, Boolean, etc.) convert primitives into objects.
+- Useful for collections (like ArrayList, HashMap) which require objects.
+
+---------------------------------------
+9. "final" Keyword
+---------------------------------------
+- final variable → makes value constant, cannot be reassigned.
+- final method → cannot be overridden.
+- final class → cannot be extended (inheritance blocked).
+- Example:
+      final int x = 10;
+      final class A {} // cannot be subclassed.
+
+---------------------------------------
+10. Garbage Collection (GC)
+---------------------------------------
+- Java automatically manages memory using Garbage Collector.
+- Object becomes eligible for GC when no reference is pointing to it.
+- finalize() method (deprecated in modern Java) was used for cleanup.
+- We can request GC using `System.gc()` but it is not guaranteed.
+- Cleaner API (Java 9+) provides better cleanup control.
