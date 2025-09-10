@@ -18,6 +18,7 @@ DSA:
 ├── D01_bitManipulation
 ├── O01_OPPsIntroduction     # Day 1: OOPs basics + Notes (PDF + TXT)
 ├── O02_OPPsPackages         # Day 2: Packages, Static, Inner Classes, Singleton + Notes (PDF + TXT)
+├── O03_OPPsPrinciples       # Day 3: Inheritance, Polymorphism, Encapsulation, Abstraction + Notes (PDF + TXT)
 ├── R01_Recursion
 ├── practice01
 │
@@ -40,7 +41,8 @@ Each OOPs folder contains:
 So far these folders have notes:  
 
 - [**O01_OPPsIntroduction**](./O01_OPPsIntroduction) → Classes, Objects, Constructors, `this`, Wrapper classes, `final`, Garbage Collection.  
-- [**O02_OPPsPackages**](./O02_OPPsPackages) → Packages, `import`, `static`, Inner Classes, Singleton Pattern.  
+- [**O02_OPPsPackages**](./O02_OPPsPackages) → Packages, `import`, `static`, Inner Classes, Singleton Pattern.
+- [**O03_OPPsPrinciples**](./O03_OPPsPrinciples) → Inheritance, `super`, Polymorphism, Encapsulation, Abstraction
 
 
 ## 🚀 How to Run
