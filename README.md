@@ -26,6 +26,10 @@ DSA:
 └── README.md
 
 ```
+---
+### 📌 Note  
+If you are starting out or want to reinvent the wheel...  
+please have a look at this repo first 👉 [DevGoyalG/DSA](https://github.com/DevGoyalG/DSA)
 
 
 ---
