@@ -1,0 +1,12 @@
+POLYMORPHISM IN JAVA
+
+1. Compile-time Polymorphism (Method Overloading)
+   - Same class, same method name, different parameter list.
+
+2. Runtime Polymorphism (Method Overriding)
+   - Different classes with inheritance.
+   - Parent reference, child object → method decided at runtime.
+
+Important:
+- Overloading ≠ Overriding
+- Constructors can be overloaded, but NOT overridden.

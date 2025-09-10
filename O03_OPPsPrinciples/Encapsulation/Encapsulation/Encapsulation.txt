@@ -1,0 +1,15 @@
+ENCAPSULATION IN JAVA
+
+Definition:
+- Wrapping data (fields) and code (methods) together.
+- Hide fields using `private`, give access using getters & setters.
+
+Advantages:
+- Data hiding
+- Validation before setting values
+- Code flexibility
+
+Example:
+private int age;
+public void setAge(int a) { if(a > 0) age = a; }
+public int getAge() { return age; }

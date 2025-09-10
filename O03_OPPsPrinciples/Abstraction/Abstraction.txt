@@ -1,0 +1,15 @@
+ABSTRACTION IN JAVA
+
+Definition:
+- Hiding implementation, exposing only essential features.
+
+Achieved By:
+1. Abstract Classes (0–100% abstraction)
+   - `abstract class` with abstract + concrete methods.
+2. Interfaces (100% abstraction before Java 8)
+   - Can only define method signatures (till Java 7).
+   - From Java 8 onwards → default & static methods allowed.
+
+Difference from Encapsulation:
+- Encapsulation → hides DATA (fields).
+- Abstraction → hides IMPLEMENTATION (methods).

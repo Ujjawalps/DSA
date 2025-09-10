@@ -1,0 +1,14 @@
+INHERITANCE IN JAVA
+
+1. Single Inheritance → Child extends one parent.
+2. Multilevel Inheritance → Child → Parent → Grandparent.
+3. Hierarchical Inheritance → Multiple children from same parent.
+4. Multiple Inheritance → Not supported directly in Java (ambiguity problem),
+   solved using INTERFACES.
+
+Key Keywords:
+- `extends` → used for classes
+- `super` → to call parent constructor or methods
+- Constructor chaining happens top-down (parent → child).
+
+Example: Box → BoxWithWeight → BoxWithPrice

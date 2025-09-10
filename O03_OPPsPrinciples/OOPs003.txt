@@ -1,0 +1,102 @@
+OOPs – Day 3 (Interview Prep Notes)
+
+==================================================
+🔹 1. Principles of OOP
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Abstraction
+
+==================================================
+🔹 2. Inheritance
+Definition:
+- Process where one class acquires the properties (fields & methods) of another.
+- Promotes code reuse.
+
+Types:
+1. Single Inheritance → One child extends one parent.
+2. Multilevel Inheritance → Parent → Child → Grandchild.
+3. Hierarchical Inheritance → One parent, many children.
+4. Multiple Inheritance → Not supported directly in Java (ambiguity). Achieved using Interfaces.
+
+Key Points:
+- `extends` keyword is used.
+- `super()` → calls parent constructor or methods.
+- Constructor chaining: Parent → Child.
+- Variables are resolved at compile-time (reference type matters).
+- Methods are resolved at runtime (object type matters).
+
+Interview Qs:
+Q. Why doesn’t Java support multiple inheritance with classes?
+A. To avoid ambiguity (Diamond Problem). Interfaces are used instead.
+
+==================================================
+🔹 3. Polymorphism
+Definition:
+- Same entity (method) performing different behaviors in different contexts.
+
+Types:
+1. Compile-time Polymorphism (Method Overloading)
+   - Same class, same method name, different parameters.
+   - Resolved at compile-time.
+   - Constructors can be overloaded.
+   - Return type alone cannot differentiate methods.
+
+2. Runtime Polymorphism (Method Overriding)
+   - Parent & Child have same method signature.
+   - Child method overrides parent method.
+   - Resolved at runtime (Dynamic Binding).
+   - Needs inheritance.
+   - Only methods can be overridden (not constructors, not static).
+
+Interview Qs:
+Q. Can constructors be overridden?
+A. No, they can only be overloaded.
+
+Q. What is dynamic method dispatch?
+A. Process where the call to an overridden method is resolved at runtime based on the object.
+
+==================================================
+🔹 4. Encapsulation
+Definition:
+- Wrapping of data (fields) and methods together.
+- Hide data using `private` and give controlled access via getters/setters.
+
+Advantages:
+- Data hiding
+- Security & validation
+- Modularity
+
+Example:
+private int age;
+public void setAge(int a) { if(a>0) age=a; }
+public int getAge() { return age; }
+
+Interview Qs:
+Q. Difference between Encapsulation and Abstraction?
+A.
+- Encapsulation → hides DATA (variables).
+- Abstraction → hides IMPLEMENTATION (methods).
+
+==================================================
+🔹 5. Abstraction
+Definition:
+- Hiding implementation and exposing only essential features.
+
+How?
+1. Abstract classes (0–100% abstraction)
+2. Interfaces (100% abstraction till Java 7, default/static methods allowed from Java 8)
+
+Interview Qs:
+Q. Can we create object of abstract class?
+A. No, but we can have reference of abstract class.
+
+Q. Why use abstraction?
+A. To design loosely coupled systems and focus on "what" instead of "how".
+
+==================================================
+✅ One-liner Recap
+- Inheritance → Reusability
+- Polymorphism → Flexibility
+- Encapsulation → Security
+- Abstraction → Design simplicity
