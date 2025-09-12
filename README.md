@@ -19,6 +19,7 @@ DSA:
 ├── O01_OPPsIntroduction     # Day 1: OOPs basics + Notes (PDF + TXT)
 ├── O02_OPPsPackages         # Day 2: Packages, Static, Inner Classes, Singleton + Notes (PDF + TXT)
 ├── O03_OPPsPrinciples       # Day 3: Inheritance, Polymorphism, Encapsulation, Abstraction + Notes (PDF + TXT)
+├── O04_OOPsAccessControl # Day 4: Access Modifiers, Packages, Object Class + Notes (PDF + TXT)
 ├── R01_Recursion
 ├── practice01
 │
@@ -47,6 +48,7 @@ So far these folders have notes:
 - [**O01_OPPsIntroduction**](./O01_OPPsIntroduction) → Classes, Objects, Constructors, `this`, Wrapper classes, `final`, Garbage Collection.  
 - [**O02_OPPsPackages**](./O02_OPPsPackages) → Packages, `import`, `static`, Inner Classes, Singleton Pattern.
 - [**O03_OPPsPrinciples**](./O03_OPPsPrinciples) → Inheritance, `super`, Polymorphism, Encapsulation, Abstraction
+- [**O04_OOPsAccessControl**](./O04_OOPsAccessControl) → Access Modifiers, Packages, In-built Packages, Object Class, `hashCode()`, `equals()`, `instanceof`, `getClass()`. 
 
 
 ## 🚀 How to Run
