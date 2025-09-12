@@ -1,0 +1,74 @@
+Day 4: OOPs – Access Control, Packages & Object Class
+
+----------------------------------------------------
+🔑 Topics Covered
+----------------------------------------------------
+1. Access Modifiers
+   - private: Accessible only within the same class.
+   - default (no modifier): Accessible within the same package.
+   - protected: Accessible within the same package + subclasses in different packages.
+   - public: Accessible everywhere.
+
+2. Rules for Modifiers
+   - Variables, methods, and constructors can use modifiers.
+   - Classes can only be public or default (no modifier).
+
+3. When to Use Which?
+   - private → Encapsulation (data hiding).
+   - default → Internal helper functionality (same package only).
+   - protected → Inheritance cases.
+   - public → API methods/classes.
+
+4. Protected Modifier Notes
+   - Accessible in subclasses (even in different packages) via inheritance.
+   - BUT cannot be accessed directly via object reference in different packages.
+
+5. Packages
+   - Group classes/interfaces logically.
+   - Avoids naming conflicts.
+   - Helps modularize code.
+
+6. In-built Packages
+   - java.lang → Core classes (String, Math, Object, etc.)
+   - java.io   → Input/output streams, File handling.
+   - java.util → Collections, Date, Scanner, etc.
+   - java.applet → Old GUI applets.
+   - java.awt → Abstract Window Toolkit (GUI).
+   - java.net → Networking classes (URL, Socket, etc.)
+
+7. Object Class
+   - Root of all classes in Java.
+   - Every class implicitly extends Object.
+   - Provides important methods.
+
+8. Important Object Methods
+   - toString(): String representation of object.
+   - equals(Object obj): Value equality (default → reference check).
+   - hashCode(): Integer hash for collections.
+   - getClass(): Runtime class info.
+   - clone(): Copy of object.
+   - finalize(): Called before GC.
+   - wait(), notify(), notifyAll(): Thread communication.
+
+9. hashCode & equals
+   - `==` → Reference (memory address).
+   - `equals()` → Value comparison (if overridden).
+   - Must override `hashCode()` when overriding `equals()`.
+
+10. instanceof Operator
+   - Checks if an object is instance of a class/subclass.
+   Example: obj instanceof String
+
+----------------------------------------------------
+🎤 Interview Questions
+----------------------------------------------------
+Q1: Difference between private, protected, default, and public?
+Q2: Can a top-level class be private or protected?
+Q3: Why do we need packages in Java?
+Q4: Explain difference between `==` and `equals()`.
+Q5: Why should we override both equals() and hashCode()?
+Q6: What is the parent class of all classes in Java?
+Q7: Name some methods from Object class.
+Q8: What is the use of instanceof operator?
+Q9: Can we access protected members of a class in different package?
+Q10: What is java.lang package and why is it special?
